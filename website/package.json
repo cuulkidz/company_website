@@ -12,6 +12,7 @@
     "element-ui": "^1.2.4",
     "vue": "^2.2.1",
     "vue-router": "^2.3.0",
+    "vue-template-compiler": "^2.2.4",
     "vueboot": "^0.4.5"
   },
   "devDependencies": {
