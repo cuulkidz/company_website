@@ -12,7 +12,15 @@ Vue.component('navigation', {
 			]
 		};
 	},
-	template: '<div><div class="nav-link" v-for="link in links"><a :href="link.link">{{ link.name }}</a></div></div>',
+	template: '<div id="nav-spot"><div class="nav-link" v-for="link in links"><a :href="link.link">{{ link.name }}</a></div></div>',
 })
 </script>
+
+<style type="scss">
+	#nav-spot {
+		float: right;
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+</style>
 	

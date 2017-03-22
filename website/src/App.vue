@@ -1,8 +1,12 @@
 <template>
-  <div id="app">
-    <navigation></navigation>
-    <router-view></router-view>
-  </div>
+  <el-row id="app">
+    <el-col :span="24">
+      <div class="main-content home-background">
+        <navRegion></navRegion>
+        <router-view></router-view>
+      </div>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
@@ -17,30 +21,34 @@ export default {
 </script>
 
 <style lang="scss">
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100% !important;
+  min-width: 100% !important;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 h1, h2 {
   font-weight: normal;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 a {
-  color: #42b983;
+  color: #20A0FF;
+}
+
+.main-content {
+
+}
+.home-background {
+  background-color: #F9FAFC;
+  height:100vh;
 }
 </style>
