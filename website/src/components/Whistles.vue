@@ -17,10 +17,10 @@ Vue.component('whistles', {
 			font-size: 50px;
 		}
 		#secondSlide{
-			font-size: 70px;
+			font-size: 50px;
 		}
 		#thirdSlide {
-			font-size: 100px;
+			font-size: 50px;
 		}
 	}
 </style>
