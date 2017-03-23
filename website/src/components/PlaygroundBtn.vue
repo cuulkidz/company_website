@@ -27,11 +27,15 @@ Vue.component('playground', {
 		bottom: 0;
 		margin-bottom: 100px;
 		margin-left: 100px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
 		height: 55px;
-		font-family: 'Gotham SSm B','Gotham SSm A',Helvetica,Roboto,Arial,sans-serif;
+		font-family: 'Lato',sans-serif;
 		border: 2px solid #13CE66;
 		color: #13CE66;
-		font-size: 18px;
+		font-size: 20px;
 		&:hover{
 			background-color: #13CE66;
 			color: #ffffff;

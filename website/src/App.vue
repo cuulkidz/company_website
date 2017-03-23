@@ -19,7 +19,6 @@ export default {
   }
 }
 </script>
-
 <style lang="scss">
 html, body {
   margin: 0 !important;
@@ -27,7 +26,6 @@ html, body {
   min-height: 100% !important;
   min-width: 100% !important;
 }
-
 #app {
   font-family: 'Lato', sans-serif, 'Avenir', Helvetica, Arial;
   -webkit-font-smoothing: antialiased;
@@ -35,11 +33,9 @@ html, body {
   text-align: center;
   color: #2c3e50;
 }
-
 h1, h2 {
   font-weight: normal;
 }
-
 a {
   color: #20A0FF;
 }
