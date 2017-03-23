@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is home
+    <p>{{ title }}</p>
     <whistles></whistles>
     <playground></playground>
   </div>
@@ -17,5 +17,13 @@ export default {
 }
 
 </script>
-<style type="scss">
+<style type="scss" scope>
+p {
+  font-size: 20px;
+}
+@media screen and (max-height: 450px) {
+  p {
+    font-size: 60px;
+  }
+}
 </style>

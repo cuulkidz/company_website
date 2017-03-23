@@ -18,9 +18,17 @@ Vue.component('logo', {
 		width: 45px;
 		left: 0;
 		top: 0;
-		background-color: #13CE66;
+		background-color: #FF4949;
 		border-radius: 25px;
-		margin-top: 25px;
-		margin-left: 25px;
+		margin-top: 50px;
+		margin-left: 50px;
 	}
+	@media screen and (max-height: 450px) {
+		.logo {
+			height: 70px;
+			width: 70px;
+			margin-top: 35px;
+			margin-left: 35px;
+		}
+    }
 </style>
