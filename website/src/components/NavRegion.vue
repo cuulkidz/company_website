@@ -13,7 +13,9 @@ Vue.component('navRegion', {
 
 <style type="scss" scope>
 	.nav-area {
-		height: 150px;
+		height: 10vh;
+		border-right: solid 12px rgba(0,224,183,0.95);
+		height: 20vh;
 	}
 </style>
 	
