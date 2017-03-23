@@ -43,8 +43,13 @@ Vue.component('navigation', {
 	color: #000;
 	font-size: 50px;
 	position: absolute;
-    top: 20px;
+    top: 35px;
     right: 45px;
+}
+.nav-control:hover , .nav-control:focus {
+	color: rgba(0,224,183,0.95);
+	cursor: pointer;
+	pointer: hand;
 }
 .cool-heading {
 	margin-top: 20px;
