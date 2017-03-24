@@ -11,7 +11,7 @@ Vue.component('logo', {
 })
 </script>
 
-<style type="scss" scope>
+<style type="css" scope>
 	.logo {
 		position: fixed;
 		height: 45px;
@@ -23,12 +23,12 @@ Vue.component('logo', {
 		margin-top: 50px;
 		margin-left: 50px;
 	}
-	@media screen and (max-height: 450px) {
-		.logo {
-			height: 70px;
-			width: 70px;
-			margin-top: 35px;
-			margin-left: 35px;
-		}
-    }
+	@media only screen and (max-width: 480px)and only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-width: 640px) {
+	  .logo {
+	  	width: 80px;
+	  	height: 80px;
+	  	border-radius: 40px;
+	  	margin-top: 60px;
+	  }
+	}
 </style>

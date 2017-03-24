@@ -11,16 +11,5 @@ Vue.component('whistles', {
 })
 </script>
 <style lang="scss" scope>
-	#slideTextArea {
 
-		#firstSlide{
-			font-size: 50px;
-		}
-		#secondSlide{
-			font-size: 50px;
-		}
-		#thirdSlide {
-			font-size: 50px;
-		}
-	}
 </style>

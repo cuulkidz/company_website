@@ -20,20 +20,17 @@ Vue.component('playground', {
 })
 </script>
 
-<style type="scss" scope>
+<style type="css" scope>
 	.play-btn {
 		position: fixed;
 		left: 0;
 		bottom: 0;
 		margin-bottom: 100px;
 		margin-left: 100px;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		padding-left: 15px;
-		padding-right: 15px;
-		height: 55px;
+		padding: 15px;
 		font-family: 'Lato',sans-serif;
 		border: 2px solid #13CE66;
+		border-radius: 4px;
 		color: #13CE66;
 		font-size: 20px;
 		&:hover{
@@ -45,5 +42,15 @@ Vue.component('playground', {
 		background-color: #13CE66;
 		color: #ffffff;
 		border-color: #13CE66;
+	}
+	@media only screen and (max-width: 480px)and only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-width: 640px) {
+	  .play-btn {
+	  	font-size: 3.5em;
+	  	margin-top: 50px;
+	  	margin-left: 70px;
+	  	padding: 30px;
+	  	border: 4px solid #13CE66;
+	  	border-radius: 12px;
+	  }
 	}
 </style>
