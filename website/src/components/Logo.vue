@@ -20,8 +20,10 @@ Vue.component('logo', {
 		top: 0;
 		background-color: #FF4949;
 		border-radius: 25px;
-		margin-top: 50px;
-		margin-left: 50px;
+		padding: 10px;
+		margin: 10px;
+		/*margin-top: 50px;
+		margin-left: 50px;*/
 	}
 	@media screen and (max-height: 450px) {
 		.logo {

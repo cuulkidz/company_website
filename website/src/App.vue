@@ -44,7 +44,7 @@ a {
 
 }
 .home-background {
-  background-color: #F9FAFC;
   height:100vh;
+  background-color: white;
 }
 </style>
