@@ -1,12 +1,22 @@
 <template>
-	<el-row class="height-85 padding-10">
-  		<el-col :span="13" class="service-screen">
-  			<div class="service-text">
-				<span class="montserrat">{{ service.caption }}</span>
-				<span class="">{{ service.info }}</span>
-			</div>
-  		</el-col>
-	</el-row>
+	<div>
+		<el-row class="height-85 padding-10">
+	  		<el-col :span="13" class="service-screen">
+	  			<div class="service-text">
+					<span class="montserrat">{{ service.caption }}</span>
+					<span class="">{{ service.info }}</span>
+				</div>
+	  		</el-col>
+		</el-row>
+		<el-row>
+			<el-col :span="24">
+				<div v-for="service in services">
+					<h1>{{ service.caption }}</h1>
+					<h4>{{ service.info }}</h4>
+				</div>
+			</el-col>
+		</el-row>
+	</div>
 </template>
 
 <script type="text/javascript">
@@ -14,8 +24,8 @@
 		data() {
 			return {
 				services: [
-					{ "caption": 'Being of service to others makes us happy', "info": ''},
-					{ "caption": 'Something', "info": ''}
+					{ "caption": 'Being of service to others makes us happy', "info": 'This is a test info' },
+					{ "caption": 'Something', "info": 'Another test info' }
 				],
 				service: { caption: 'Being of service to others makes us happy', info: ''},
 				title: 'This is services'
