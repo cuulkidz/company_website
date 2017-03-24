@@ -18,7 +18,7 @@ Vue.component('navigation', {
 						<logo></logo>
 				  	  	<a href="javascript:void(0)" class="closebtn" v-on:click="closeNav">&times;</a>
 					  	<div class="overlay-content">
-					  		<el-row v-for="link in links">
+					  		<el-row v-for="link in links" :key="link.link">
 					  			<el-col :span="14" :offset="8">
 						    		<a :href="link.link" v-on:click="closeNav">{{ link.name }}</a>
 						    		<hr v-if="link.name != 'Services'" class="nav-line">
@@ -38,24 +38,18 @@ Vue.component('navigation', {
 })
 </script>
 
-<style type="scss">
+<style type="css">
 .nav-control {
 	color: #000;
 	font-size: 50px;
 	position: absolute;
-    top: 35px;
-    right: 45px;
+  top: 35px;
+  right: 45px;
 }
 .nav-control:hover , .nav-control:focus {
 	color: rgba(0,224,183,0.95);
 	cursor: pointer;
 	pointer: hand;
-}
-.cool-heading {
-	margin-top: 20px;
-	color: #ffffff;
-	font-size: 50px;
-	font-family: 'Lato';
 }
 /* The Overlay (background) */
 .overlay {
@@ -119,15 +113,24 @@ hr.nav-line:before {
   border-color: #E5E9F2;
   border-width: 0 0 0.1px 0; 
 }
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 40px; font-size: 200;}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-        font-weight: 100;
+@media only screen and (max-width: 480px)and only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-width: 640px) {
+    .nav-control {
+      font-size: 5em;
+      position: absolute;
+      top: 45px;
+      right: 60px;
     }
-}
+    .overlay .closebtn {
+      margin-top: 5px;
+      margin-right: 30px;
+      font-size: 7em;
+      color: #ffffff;
+    }
+    .overlay a {
+      padding: 30px;
+      font-size: 70px;
+    }
+  }
 
 </style>
 	
