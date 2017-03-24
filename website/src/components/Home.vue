@@ -17,13 +17,13 @@ export default {
 }
 
 </script>
-<style type="scss" scope>
+<style type="css" scope>
 p {
-  font-size: 20px;
+  font-size: 1.5em;
 }
-@media screen and (max-height: 450px) {
+@media only screen and (max-width: 480px)and only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-width: 640px) {
   p {
-    font-size: 60px;
+    font-size: 4em;
   }
 }
 </style>
