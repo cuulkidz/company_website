@@ -43,8 +43,8 @@ Vue.component('navigation', {
 	color: #000;
 	font-size: 50px;
 	position: absolute;
-    top: 20px;
-    right: 45px;
+            top: 20px;
+             right: 45px;
 }
 .cool-heading {
 	margin-top: 20px;
