@@ -13,7 +13,7 @@ Vue.component('navRegion', {
 
 <style type="css" scope>
 	#nav-area {
-		border-right: solid 12px rgba(0,224,183,0.95);
+		border-right: solid 12px #cc3341;
 		height: 20vh;
 	}
 	@media only screen and (max-width: 480px)and only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-width: 640px) {
