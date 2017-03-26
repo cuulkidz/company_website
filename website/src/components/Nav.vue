@@ -5,10 +5,10 @@ Vue.component('navigation', {
 	data: function() {
 		return {
 			links: [
-				{ "name": "Home", "link": "#/" },
-				{ "name": "About", "link": "#/about" },
-				{ "name": "Contact", "link": "#/contact"},
-				{ "name": "Services", "link": "#/services"}
+				{ "name": "Home", "link": "#/", "intro": "Get to the beginning" },
+				{ "name": "About", "link": "#/about", "intro": "Know us more" },
+				{ "name": "Contact", "link": "#/contact", "intro": "Holla at us"},
+				{ "name": "Services", "link": "#/services", "intro": "The cool things we do"}
 			]
 		};
 	},
@@ -18,56 +18,78 @@ Vue.component('navigation', {
 						<logo></logo>
 				  	  	<a href="javascript:void(0)" class="closebtn" v-on:click="closeNav">&times;</a>
 					  	<div class="overlay-content">
-					  		<el-row v-for="link in links" :key="link.link">
-					  			<el-col :span="14" :offset="8">
-						    		<a :href="link.link" v-on:click="closeNav">{{ link.name }}</a>
-						    		<hr v-if="link.name != 'Services'" class="nav-line">
+					  		<el-row v-for="link in links" :key="link.link" id="nav-area-content">
+					  			<el-col>
+						    		<a :href="link.link" v-on:click="closeNav">{{ link.name }}<i class="link-intro">{{ link.intro }}</i></a>
+						    		<hr v-if="link.name != 'Servicesss'" class="nav-line">
 						    	</el-col>
 						    </el-row>
+                <div id="get-social">
+                  <el-row>
+                    <el-col :md="2" :lg="2" :sm="6" :sx="6"><a href="#" class="facebook"><img class="nav-social-icon" src="/dist/images/facebook.png"></img></a></el-col>
+                    <el-col :md="2" :lg="2" :sm="6" :sx="6"><a href="#" class="facebook"><img class="nav-social-icon" src="/dist/images/twitter.png"></img></a></el-col>
+                    <el-col :md="2" :lg="2" :sm="6" :sx="6"><a href="#" class="facebook"><img class="nav-social-icon" src="/dist/images/google_plus.png"></img></a></el-col>
+                  </el-row>
+                </div>
 						</div>
 					</div>
 				</div>`,
 	methods: {
 		openNav: function() {
-			document.getElementById("myNav").style.width = "100%";
+			document.getElementById("myNav").style.height = "100%";
 		},
 		closeNav: function() {
-			document.getElementById("myNav").style.width = "0%";
+			document.getElementById("myNav").style.height = "0%";
 		}
 	}
 })
 </script>
 
-<style type="css">
+<style type="css" scope>
+#nav-area-content, #get-social {
+  width: 50%;
+  margin: 0 auto;
+}
+.nav-social-icon {
+  width: 50px;
+  height: auto;
+  margin-left: 0;
+}
+.nav-social-icon:hover {
+  margin-top: -15px;
+  transition: 0.8s;
+}
 .nav-control {
-	color: #000;
+	color: #cc3341;
 	font-size: 50px;
 	position: absolute;
   top: 35px;
   right: 45px;
 }
 .nav-control:hover , .nav-control:focus {
-	color: rgba(0,224,183,0.95);
+	color: #000;
 	cursor: pointer;
 	pointer: hand;
 }
 /* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
-    height: 100%;
-    width: 0;
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */ 
+    height: 0%;   
+    width: 100%;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    background-color: rgba(0,224,183,0.95); /* Black fallback color */
+    /*background-color: rgba(0,224,183,0.95); /* Black fallback color */
+    background-color: #cc3341;
     overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    transition: 0.5s;
 }
+
 .overlay-content {
     position: relative;
     top: 13%; /* 25% from the top */
-    width: 80%; /* 100% width */
+    width: 100%; /* 100% width */
     text-align: left; /* Centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
@@ -75,15 +97,23 @@ Vue.component('navigation', {
     text-decoration: none;
     padding: 15px;
     font-size: 50px;
-    font-weight: bolder;
+    font-weight: light;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
+    transition: 0.5s;
 }
 .overlay a:hover, .overlay a:focus {
-    color: #000;
+    color: #e6989f;
     transition: 0.8s;
+}
+.overlay a i {
+  font-style: normal;
+  color: #efc2c6;
+  font-size: 15px;
+  margin-left: 30px;
+  text-transform: lowercase;
+  font-family: "Comic Sans Ms";
 }
 .overlay .closebtn {
     position: absolute;
@@ -95,13 +125,10 @@ Vue.component('navigation', {
     color: #ffffff;
     font-weight: 100;
 }
-.nav-line {
-	color: #333;
-	height: 0.1px;
-}
+
 hr.nav-line { 
   border-style: solid; 
-  border-color: #E5E9F2; 
+  border-color: #d65c66; 
   border-width: 0.1px 0 0 0; 
 } 
 hr.nav-line:before { 
@@ -110,7 +137,7 @@ hr.nav-line:before {
   height: 30px; 
   margin-top: -31px; 
   border-style: solid;
-  border-color: #E5E9F2;
+  border-color: #d65c66;
   border-width: 0 0 0.1px 0; 
 }
 @media only screen and (max-width: 480px)and only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-width: 640px) {
@@ -120,6 +147,15 @@ hr.nav-line:before {
       top: 45px;
       right: 60px;
     }
+    #nav-area-content, #get-social {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .nav-social-icon {
+      width: 2em;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
     .overlay .closebtn {
       margin-top: 5px;
       margin-right: 30px;
@@ -128,7 +164,11 @@ hr.nav-line:before {
     }
     .overlay a {
       padding: 30px;
-      font-size: 70px;
+      font-size: 5em;
+    }
+    .overlay a i {
+      font-size: 30px;
+      margin-left: 30px;
     }
   }
 
