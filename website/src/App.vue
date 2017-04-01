@@ -19,7 +19,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="css">
 html, body {
   margin: 0 !important;
   padding: 0 !important;
