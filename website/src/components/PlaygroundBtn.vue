@@ -28,7 +28,7 @@ Vue.component('playground', {
 		margin-bottom: 100px;
 		margin-left: 100px;
 		padding: 15px;
-		font-family: 'Lato',sans-serif;
+		font-family: 'Open Sans', 'Lato',sans-serif;
 		border: 2px solid #cc3341;
 		border-radius: 4px;
 		color: #cc3341;

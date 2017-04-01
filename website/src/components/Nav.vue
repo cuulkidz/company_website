@@ -96,7 +96,7 @@ Vue.component('navigation', {
 .overlay a {
     text-decoration: none;
     padding: 15px;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: light;
     color: #ffffff;
     text-align: left;

@@ -27,7 +27,7 @@ html, body {
   min-width: 100% !important;
 }
 #app {
-  font-family: 'Lato', sans-serif, 'Avenir', Helvetica, Arial;
+  font-family: 'Open Sans', 'Lato', sans-serif, 'Avenir', Helvetica, Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
