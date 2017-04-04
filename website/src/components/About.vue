@@ -20,6 +20,11 @@
     	<h2>Our Story</h2>
     	We do not really have one. <br>Let's see how things go.
     </div>
+    <div id="mission">
+    	<hr>
+    	<p>A company that builds awesome websites, mobile and desktop apps to enable businesses improve performance.</p>
+    	<p id="mission-small"></p>
+    </div>
   </div>
 </template>
 <script>
@@ -43,9 +48,11 @@ export default {
 	text-align: left;
 	margin-left: 200px;
 	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
 }
-#about-intro h2 {
+#about-intro-text h2 {
 	font-size: 25px;
+	font-weight: 100;
 }
 #about-intro p {
 	font-size: 18px;
@@ -79,11 +86,36 @@ export default {
 #about-content {
 	margin: 0 auto;
 }
+#mission {
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#mission p {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	font-weight: 100;
+	font-size: 20px;
+	line-height: 30px;
+}
+#mission hr {
+	visibility: hidden;
+}
 
 @media only screen and (max-width: 480px)and only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-width: 640px) {
-  p {
-    font-size: 4em;
-  }
+  #mission {
+	width: 80%;
+ }
+ #mission p {
+ 	font-weight: 100;
+	font-size: 2.5em;
+	line-height: 1.5em;
+ }
+ #mission hr {
+ 	visibility: visible;
+ 	broder-top: solid 0.3px #D5D9E0;
+ }
   #left-about {
 	height: 400px;
 	width: 100%;
